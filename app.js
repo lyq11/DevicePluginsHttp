@@ -34,7 +34,7 @@ app.use(function (req, res, next) {
 })
 
 const hostname = process.env.IP || "0.0.0.0"
-const port = process.env.PORT || 3004
+const port = process.env.PORT || 9003
 
 app.listen(port, hostname,()=>{
     console.log(`server listening at ${hostname}:${port}`)
