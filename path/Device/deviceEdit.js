@@ -8,7 +8,19 @@ router.post("/device/edit", [
     check("id")
         .notEmpty()
         .isNumeric()
-        .withMessage("Password can not be empty"),checkToken
+        .withMessage("Password can not be empty"),
+    check("product_id")
+        .isNumeric()
+        .withMessage("Password can not be empty"),
+    check("deivceClassID")
+        .isNumeric()
+        .withMessage("Password can not be empty"),
+    check("deivceID")
+        .isNumeric()
+        .withMessage("Password can not be empty"),
+    check("online")
+        .isNumeric()
+        .withMessage("Password can not be empty"),checkToken,
 ], function (req, res) {
     const errors = validationResult(req)
     if (!errors.isEmpty()) {

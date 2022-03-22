@@ -1,4 +1,4 @@
-const {toString} = require("validator")
+/* eslint-disable max-params */
 const Tars = require("@tars/rpc").client
 const TarsRPC = require("../proxy/ProductProcessProxy").CivetDevicePluginCenter
 
@@ -6,7 +6,7 @@ class ProductProcessIns {
     proxy = null
 
     constructor() {
-        Tars.setProperty("locator", "tars.tarsregistry.QueryObj@tcp -h 172.25.0.3 -t 60000 -p 17890")
+        // Tars.setProperty("locator", "tars.tarsregistry.QueryObj@tcp -h 172.25.0.3 -t 60000 -p 17890")
         this.proxy = Tars.stringToProxy(TarsRPC.ProductProcessProxy, "CivetDevicePluginCenter.ProductManagerServer.ProductProcessObj")
     }
 

@@ -8,7 +8,18 @@ const rpcIns = require("../../ins/ProductProcessIns").getInstance()
 router.post("/product/edit", [
     check("id")
         .notEmpty()
+        .isNumeric()
         .withMessage("product can not be empty"),
+    check("product_id")
+        .isString()
+        .withMessage("product can not be empty"),
+    check("productName")
+        .isString()
+        .withMessage("product can not be empty"),
+    check("platform")
+        .isString()
+        .withMessage("product can not be empty"),
+
     checkToken
 ], function (req, res) {
     const errors = validationResult(req)

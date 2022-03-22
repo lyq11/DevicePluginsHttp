@@ -1,3 +1,4 @@
+/* eslint-disable max-params */
 const Tars = require("@tars/rpc").client
 const TarsRPC = require("../proxy/ManProcessProxy").CivetDevicePluginCenter
 
@@ -5,7 +6,7 @@ class ManProcessIns {
     proxy = null
 
     constructor() {
-        Tars.setProperty("locator", "tars.tarsregistry.QueryObj@tcp -h 172.25.0.3 -t 60000 -p 17890")
+        // Tars.setProperty("locator", "tars.tarsregistry.QueryObj@tcp -h 172.25.0.3 -t 60000 -p 17890")
         this.proxy = Tars.stringToProxy(TarsRPC.ManProcessProxy, "CivetDevicePluginCenter.PluginsManagement.ManProcessObj")
     }
 
@@ -49,6 +50,7 @@ class ManProcessIns {
             fail(e.response.error.message)
         })
     }
+    // eslint-disable-next-line max-params
     PluginEdit(pluginID,key,value,success,fail){
         let newProduct = new TarsRPC.Plugin()
         pluginID.UpdateTime = new Date().getTime().toString()

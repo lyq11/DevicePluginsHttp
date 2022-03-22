@@ -3,8 +3,8 @@ const VerifyRPC = require("../proxy/VerifyProxy").civetAdminCenter
 class AuthProcessIns {
     proxy = null
     constructor() {
-        Tars.setProperty("locator", "tars.tarsregistry.QueryObj@tcp -h 172.25.0.3 -t 60000 -p 17890")
-        this.proxy = Tars.stringToProxy(VerifyRPC.VerifyProxy,"civetTenantCenter.TenantUserAuthTars.VerifyObj")
+        // Tars.setProperty("locator", "tars.tarsregistry.QueryObj@tcp -h 172.25.0.3 -t 60000 -p 17890")
+        this.proxy = Tars.stringToProxy(VerifyRPC.VerifyProxy,"civetAdminCenter.AdminAuthTars.VerifyObj")
     }
     static getInstance(){
         if(!AuthProcessIns.instance){
